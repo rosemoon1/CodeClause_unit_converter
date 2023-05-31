@@ -1,0 +1,29 @@
+function convertLength() {
+  var length = parseFloat(document.getElementById('lengthInput').value);
+  var fromUnit = document.getElementById('fromUnit').value;
+  var toUnit = document.getElementById('toUnit').value;
+
+  var convertedLength;
+  if (fromUnit === toUnit) {
+    convertedLength = length;
+  } else if (fromUnit === 'm' && toUnit === 'cm') {
+    convertedLength = length * 100;
+  } else if (fromUnit === 'cm' && toUnit === 'm') {
+    convertedLength = length / 100;
+  } else if (fromUnit === 'ft' && toUnit === 'm') {
+    convertedLength = length * 0.3048;
+  } else if (fromUnit === 'm' && toUnit === 'ft') {
+    convertedLength = length / 0.3048;
+  } else if (fromUnit === 'in' && toUnit === 'cm') {
+    convertedLength = length * 2.54;
+  } else if (fromUnit === 'cm' && toUnit === 'in') {
+    convertedLength = length / 2.54;
+  } else if (fromUnit === 'ft' && toUnit === 'cm') {
+    convertedLength = length * 30.48;
+  } else if (fromUnit === 'cm' && toUnit === 'ft') {
+    convertedLength = length / 30.48;
+  }
+
+ 
+  document.getElementById('convertedLength').value = convertedLength;
+}

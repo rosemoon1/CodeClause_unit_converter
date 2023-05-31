@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>Unit Converter</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+  <h1>Unit Converter</h1>
+  <div>
+    <label>Length:</label>
+    <input type="number" id="lengthInput">
+    <select id="fromUnit">
+      <option value="m">Meter (m)</option>
+      <option value="cm">Centimeter (cm)</option>
+      <option value="ft">Foot (ft)</option>
+      <option value="in">Inch (in)</option>
+    </select>
+  </div>
+  <div>
+    <label>Converted Length:</label>
+    <input type="number" id="convertedLength" readonly>
+    <select id="toUnit">
+      <option value="m">Meter (m)</option>
+      <option value="cm">Centimeter (cm)</option>
+      <option value="ft">Foot (ft)</option>
+      <option value="in">Inch (in)</option>
+    </select>
+  </div>
+  <button onclick="convertLength()">Convert</button>
+
+  <script src="script.js"></script>
+</body>
+</html>
